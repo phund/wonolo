@@ -4,46 +4,45 @@ import uiRouter from 'angular-ui-router';
 
 import { Meteor } from 'meteor/meteor';
 import { PAGE_SIZES } from '/imports/api/constants';
+import { name as UsersList } from '../usersList/usersList';
 
 import 'angular-paging';
 
-import template from './workersList.html';
+import template from './employersList.html';
 
-class WorkersList {
-  constructor($scope, $reactive, $state, $http, TopSearchService) {
+class EmployersList {
+  constructor($scope, $reactive, $state) {
     'ngInject';
-
     $reactive(this).attach($scope);
 
     this.$awaitUser().then((user) => {}, (err) => {
       $state.go('auth.login');
     });
 
-    this.typeList = "Worker";
+    this.typeList = "Employer";
   }
-
 }
 
-const name = 'workersList';
+const name = 'employersList';
 
 // create a module
 export default angular.module(name, [
     angularMeteor,
     uiRouter,
-    'bw.paging',
+    UsersList
   ])
   .component(name, {
     template,
     controllerAs: name,
-    controller: WorkersList
+    controller: EmployersList
   })
   .config(config);
 
 function config($stateProvider) {
   'ngInject';
   $stateProvider
-    .state('workers', {
-      url: '/workers',
-      template: '<workers-list></workers-list>'
+    .state('employers', {
+      url: '/employers',
+      template: '<employers-list></employers-list>'
     });
 }

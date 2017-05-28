@@ -12,7 +12,7 @@ import { name as Auth } from '../auth/auth';
 import { name as Home } from '../home/home';
 import { name as TopSearch } from '../topSearch/topSearch';
 import { name as WorkersList } from '../workersList/workersList';
-
+import { name as EmployersList } from '../employersList/employersList';
 
 import { pageTitle, sideNavigation, iboxTools, iboxToolsFullScreen, minimalizaSidebar, icheck, scrollThis, starRating } from '../../directives/directives';
 
@@ -44,7 +44,8 @@ export default angular.module(name, [
     'oitozero.ngSweetAlert',
     'ui.select',
     TopSearch,
-    WorkersList
+    WorkersList,
+    EmployersList
   ])
   .component(name, {
     template,

@@ -1,0 +1,30 @@
+#progress-overlay {
+  background-color: white;
+  opacity: 0.6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  min-height: 100px;
+  .progress-pane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+  }
+}
+
+.box-table-footer {
+  clear: both;
+  .pagination > .active > a {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+  }
+}
