@@ -15,18 +15,24 @@ export function getUsersList(options) {
     return [];
   }
 
+  let data =  {
+    token: token,
+    type: options.type,
+    page: options.page,
+    per: options.per
+  }
+
+  if (options.search) {
+    data.email = options.search;
+  }
+
   HTTP.get(`${Meteor.settings.API_HOST}/users`, {
     headers: {
      'Content-Type': 'application/json'
     },
-    data: {
-      token: token,
-      type: options.type,
-      page: options.page,
-      per: options.per
-    }
+    data: data
   }, (error, result) => {
-    console.log(result.data.users);
+    console.log(result);
     future.return(result.data);
   });
 

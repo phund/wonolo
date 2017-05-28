@@ -10,7 +10,6 @@ import ngSanitize from 'angular-sanitize';
 import { name as Layout } from '../layout/layout';
 import { name as Auth } from '../auth/auth';
 import { name as Home } from '../home/home';
-import { name as Spinner } from '../loadingSpinner/loadingSpinner';
 import { name as TopSearch } from '../topSearch/topSearch';
 import { name as WorkersList } from '../workersList/workersList';
 
@@ -44,7 +43,6 @@ export default angular.module(name, [
     Home,
     'oitozero.ngSweetAlert',
     'ui.select',
-    Spinner,
     TopSearch,
     WorkersList
   ])
