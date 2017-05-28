@@ -1,0 +1,24 @@
+<on-boarding ng-if="currentUser"></on-boarding>
+<!-- Wrapper-->
+<div ng-if="!currentUser">
+  <div flash-message="3000" class="flash-message"></div>
+  <div ui-view></div>
+</div>
+<div id="wrapper" ng-if="currentUser">
+  <!-- Navigation -->
+  <navigation></navigation>
+  <!-- Page wraper -->
+  <div id="page-wrapper" class="white-bg dashbard-1 container-fluid">
+    <spinner></spinner>
+    <app-header></app-header>
+    <div flash-message="3000" class="flash-message"></div>
+    <!-- Main view  -->
+    <div class="row wrapper wrapper-content">
+      <div class="col-xs-12">
+        <div ui-view></div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </div>
+</div>

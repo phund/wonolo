@@ -1,0 +1,27 @@
+<nav class="navbar-default navbar-static-side custom-navbar" role="navigation">
+  <div class="sidebar-collapse">
+    <ul side-navigation side-menu class="nav metismenu custom-navmenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element text-center" uib-dropdown>
+          <a ui-sref="profile">
+            <img alt="image" class="avatar" src="img/profile_small.jpg" />
+            <span class="clear">
+              <span class="text-muted text-xs block email">
+                <strong>{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</strong>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="logo-element">
+          <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+        </div>
+      </li>
+      <li ui-sref-active="active" class="nav-first-level">
+        <a ui-sref="employers"><i class="fa fa-users"></i> <span class="nav-label">Employers</span></a>
+      </li>
+      <li ui-sref-active="active" class="nav-first-level">
+        <a ui-sref="workers"><i class="fa fa-users"></i> <span class="nav-label">Workers</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

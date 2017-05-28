@@ -1,0 +1,75 @@
+// Basic Colors
+@navy: #1ab394; // Primary color
+@dark-gray: #c2c2c2; // Default color
+@blue: #1c84c6; // Success color
+@lazur: #23c6c8; // Info color
+@yellow: #f8ac59; // Warrning color
+@red: #ED5565; // Danger color
+// Various colors
+@text-color: #676a6c; // Body text
+@gray: #f3f3f4; // Background wrapper color
+@light-gray: #D1DADE; // Default label, badget
+@label-badget-color: #5E5E5E;
+@light-blue: #f3f6fb;
+// Spiner color and margin
+@spin-color: @navy;
+@spin-margin: 0 auto;
+// IBOX colors ( default panel colors)
+@border-color: #e7eaec; // IBox border
+@ibox-title-bg: #ffffff; // IBox Background header
+@ibox-content-bg: #ffffff; // IBox Background content
+//Sidebar width
+@sidebar-width: 220px;
+// Boxed layout width
+@boxed-width: 1200px;
+@boxed-backgound: url('patterns/shattered.png');
+//Border radius for buttons
+@btn-border-radius: 3px;
+//Navigation
+@nav-bg: #1bb395;
+@nav-profil-pattern: url("patterns/header-profile.png") no-repeat;
+@nav-text-color: #f1eeea;
+@cs-black: #5f5f5f;
+@cs-green: #1bb395;
+@cs-dark-green: #0f866e;
+@cs-red: #ff6b30;
+@cs-dark-red: #d3501b;
+@cs-orange: #f5ba6e;
+@cs-gray: #f1eeea;
+@cs-light-gray: #e7e7e7;
+// app colors
+@light-blue: #2E97DE;
+@blue: #1E5A82;
+@dark-blue: #2C3E51;
+@orange: #F5A623;
+@green: #00BD9C;
+@red: #E94C36;
+@lighter-gray: #FBFBFB;
+@light-gray: #9B9B9B;
+@gray: #D7D7D7;
+@dark-gray: #4A4A4A;
+@bg-color: #E9E9E9;
+@dark-red: #b12704;
+
+/* 
+   setup
+*/
+
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+@xl-min: 1800px;
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: (@xl-min - 1);
+@phone: ~"only screen and (min-width: @{xs-min})";
+@phone-strict: ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet: ~"only screen and (min-width: @{sm-min})";
+@tablet-strict: ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop: ~"only screen and (min-width: @{md-min})";
+@desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large: ~"only screen and (min-width: @{lg-min})";
+@large-strict: ~"only screen and (min-width: @{lg-min}) and (max-width: @{lg-max})";
+@x-large: ~"only screen and (min-width: @{xl-min})";
