@@ -1,0 +1,40 @@
+<div class="m-b-lg">
+  <div class="row">
+    <div class="col-md-3 m-t-md">
+      <h3>Workers</h3>
+    </div>
+  </div>
+  <hr class="fixed" />
+  <div class="row page-content-list">
+    <div class="col-xs-12">
+      <div class="box-table-list">
+        <div class="box-table-content">
+          <div class="col-lg-6" ng-repeat="worker in workersList.workers">
+            <div class="contact-box">
+              <div class="col-sm-4">
+                <div class="text-center">
+                  <!-- <img alt="image" class="img-circle m-t-xs img-responsive" ng-src="{{worker.avatar_url || 'img/no_image.jpg' }}"> -->
+                  <img alt="image" class="img-circle m-t-xs img-responsive" src="img/no_image.jpg">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <star-rating ng-model="worker.rating" readonly="true"></star-rating>
+                <h3><strong>{{worker.first_name}} {{worker.last_name}}</strong></h3>
+                <p class="ellipsis-text"><i class="fa fa-email"></i>{{worker.email}}</p>
+                <address class="ellipsis-text">
+                  <span ng-if="worker.address"><br>{{worker.address}}</span>
+                  <span ng-if="worker.city || worker.city || worker.zip"><br>{{worker.city}}, {{worker.address_state}} {{worker.zip}}</span>
+                  <span ng-if="worker.dob"><br><abbr>Dob:</abbr>{{worker.dob}}</span>
+                </address>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box-table-footer">
+          <jq-paging current-page="workersList.currentPage" items-per-page="workersList.itemsPerPage" items-count="workersList.itemsCount"></jq-paging>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

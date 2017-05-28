@@ -15,7 +15,7 @@ import { name as TopSearch } from '../topSearch/topSearch';
 import { name as WorkersList } from '../workersList/workersList';
 
 
-import { pageTitle, sideNavigation, iboxTools, iboxToolsFullScreen, minimalizaSidebar, icheck, scrollThis } from '../../directives/directives';
+import { pageTitle, sideNavigation, iboxTools, iboxToolsFullScreen, minimalizaSidebar, icheck, scrollThis, starRating } from '../../directives/directives';
 
 import 'angular-sweetalert';
 import 'ui-select';
@@ -60,6 +60,7 @@ export default angular.module(name, [
   .directive('minimalizaSidebar', minimalizaSidebar)
   .directive('icheck', icheck)
   .directive('scrollThis', scrollThis)
+  .directive('starRating', starRating)
   .config(config)
   .run(run);
 
