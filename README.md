@@ -1,4 +1,5 @@
 # Wonolo
+The application is a small part of  visualization of the Wonolo platform. It's is developed base on Meteor framework.
 ## Directory Structure
 The application will have the following directory structure:
 
